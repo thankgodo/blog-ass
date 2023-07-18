@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: darkgray;
+    background-image: url();
+}
+
+nav{
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+    
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+nav li{
+    margin: 5px;
+    font-size: x-large;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    background-color: rgb(221, 218, 216);
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.wlc{
+    margin: 2em;
+    border: 2px double;
+    border-radius: 15px;
+    background-color: rgb(221, 218, 216);
+    width: 82em;
+    height: 84vh;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+h{
+    color: brown;
+    font-size: x-large;
+    text-align: center;
+    margin-left: 6em;
+}
+h3{
+    text-align: center;
+    color: darkgreen;
+    /* background-color: gray; */
+    margin-top: -22px;
+}
+.signup{
+    text-align: center;
+}

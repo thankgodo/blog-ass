@@ -1,0 +1,20 @@
+Design and build a blog website where different users can create a blog and it's visible to everyone.
+
+Note that:
+For a users to create a blog they must have an account and are logged in.
+
+All blog posts are visible to both authenticated and non authenticated users.
+
+An authenticated user can create, update, and delete a single post, created by that user.
+
+Ensure that you follow the MVC pattern.
+
+All blogs must be saved in MongoDB.
+
+Use bcrypt jsonwebtoken and cookies for authentication and authorization.
+
+You must handle all errors on both signup and login forms.
+
+Use EJS as template engine.
+
+Good Luck!
