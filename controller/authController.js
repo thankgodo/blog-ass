@@ -4,6 +4,21 @@ const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 
 
+function errorHandler(err){
+    let errors = {email: "", password: ""}
+    if(err.message === "wrong email"){
+        errors.email = "please enter a valid email address."
+        return errors
+    }
+    
+    if(err.message === "wrong password"){
+        errors.password = 'user password is incorrect.'
+        return errors
+       
+    }
+    return errors
+}
+
 
 //get our signup form
 const getSignupForm = (req, res) => {
@@ -19,6 +34,8 @@ const getLoginForm = (req, res) => {
 const getLoggedForm = (req, res)=>{
     res.render('loggedin')
 }
+
+
 
 //post our signup form 
 const postSignupForm = async (req, res) => {
@@ -63,15 +80,16 @@ const postLoginForm = async (req, res) => {
                     }
                 })
             }else{
-                throw Error('incorrect password')            }
+                throw Error('wrong password')            }
         }else{
-            throw Error('account with email does not exist.')
+            throw Error('wrong email')
         }
     }
+
     catch(err){
-        console.log(err)
-        //deleted 1line
-        res.status(400).json({error: err})
+        console.log(err.message)
+        let errors = errorHandler(err)
+        res.status(400).json({error: errors})
     }
 }
 

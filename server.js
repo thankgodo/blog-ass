@@ -39,6 +39,12 @@ app.get('/login', (req, res) => {
 app.get('/signup', (req, res) => {
     res.render('signup')
 })
+app.get('/create', (req, res) => {
+    res.render('create')
+})
+app.get('/logout', (req, res) => {
+    res.render('logout')
+})
 
 
 
