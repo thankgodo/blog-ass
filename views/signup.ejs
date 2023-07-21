@@ -15,7 +15,7 @@
         <form action="/signup" method="post">
             <input type="text" placeholder="Enter User name" name="name"><br>
             <input type="email" placeholder="Enter your email" name="email"><br>
-            <input type="text" placeholder="Enter password" name="password"><br>
+            <input type="password" placeholder="Enter password" name="password"><br>
             <button type="submit">Register</button>
         </form>
         <br>
@@ -24,26 +24,6 @@
     </div>
     
 
-
-    <!-- <script>
-        const form = document.querySelector('form')
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault()
-            const user_email = form.user_email.value
-            const user_password = form.user_password.value
-            try{
-                fetch('/signup', {
-                    method: "POST",
-                    headers: {"content-type": "application/json"},
-                    body: JSON.stringify({user_email, user_password})
-                })
-            }
-            catch(err){
-                console.log(err)
-            }
-        })
-        
-    </script> -->
 </body>
 </body>
 </html>
